@@ -21,12 +21,12 @@
         </nav>
     </div><br><br>
 
-    <h1>CREER UN COMPTE</h1><BR></BR>
-    <form action="#" method="post">
+    <h1 class='title'>CREER UN COMPTE</h1><BR></BR>
+    <form action="#" method="post" class="form-container">
         <label for="username">Nom d'utilisateur:</label><br>
         <input type="text" id="username" name="username" required><br><br>
         
-        <label for="img">Photo de profil:</label><br>
+        <label for="img">Photo de profil:</label><br><br>
         <input type="file" id="img" name="img"><br><br>
 
         <label for="email">Email:</label><br>
@@ -40,6 +40,10 @@
 
         <label for="tel_num">Numéro de téléphone:</label><br>
         <input type="tel" id="tel_num" name="tel_num" required><br><br>
+
+        <label for="genre">Genre:</label><br>
+        <input type="radio" id="genre" for="" name="genre" value="Homme" required>Homme <br>
+        <input type="radio" id="genre" for="Femme" name="genre" value="Femme" required>Femme<br><br>
 
         <label for="ville">Ville:</label>
         <select name="ville" id="ville">
@@ -75,8 +79,10 @@
         <label for="code_postal">Code Postal:</label><br>
         <input type="text" id="code_postal" name="code_postal" required><br><br>
 
+        <label for="terms">J'accepte les termes et conditions:</label>
+        <input type="checkbox" id="terms" name="terms" required><br><br>
 
-        <input type="submit" value="Créer">
+        <input type="submit" value="Créer" >
         
 
 
@@ -90,7 +96,7 @@
         <p>Téléphone: +216 71 234 567</p>
 
         <p>Email:
-            <a href="mailto:">
+            <a href="mailto:">ensitek@gmail.com</a>
     </footer>
 </body>
 </html>
