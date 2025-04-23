@@ -1,72 +1,409 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ENSITEK </title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=d evice-width, initial-scale=1.0" />
+  <title>ENSITEK - Vente de matériels et services informatiques</title>
+  <meta name="description" content="ENSITEK - Votre boutique en ligne de matériels et services informatiques" />
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
-     <link rel="stylesheet" href="style.css">
+
 </head>
+
 <body>
-    <div>
-        <nav>
-            <ul class='nav__links'>
-                <li><a href="index.html">Accueil</a></li>
-                <li><a href="creer__compte.html">Créer un compte</a></li>                     
-                <li><a href="services.html">Services</a></li>                
-                <li><a href="index.html"><img src="assets/Logo ENSI.jpg" alt=""></a></li>
-                <li><a href="Paramètre.html">Paramètre</a></li>
-                <li><a href="about.html">About us</a></li>
-                <li><a href="contact.html">Contact</a></li>
+  <div id="root">
+    <!-- Header / Navigation -->
+    <header class="navbar">
+      <div class="container">
+        <div class="navbar-content">
+          <a href="index.html" class="logo">ENSITEK</a>
+          
+          <!-- Navigation principale -->
+          <nav class="nav-desktop">
+            <ul class="nav-links">
+              <li><a href="index.html" class="active">Accueil</a></li>
+              <li><a href="produits.html">Produits</a></li>
+              <li><a href="contact.html">Contact</a></li>
+              <li><a href="about.html">À propos</a></li>
             </ul>
-        </nav>
-    </div><br><br>
+          </nav>
+          
+          <!-- Actions -->
+          <div class="nav-actions">
+            <div class="nav-actions">
+              <form class="search-form">
+                <div class="search-box">
+                  <input type="text" placeholder="Rechercher..." />
+                  <button type="submit" class="icon-btn">
+                    <i class="fas fa-search"></i>
+                  </button>
+                </div>
+              </form>
+              </form>
+            <a href="compte.html" class="icon-btn"><i class="fas fa-user"></i></a>
+            <a href="panier.html" class="icon-btn cart-icon">
+              <i class="fas fa-shopping-cart"></i>
+              <span class="cart-count">0</span>
+            </a>
+          </div>
+          
+          <!-- Menu hamburger mobile -->
+          <button class="mobile-menu-btn">
+            <i class="fas fa-bars"></i>
+          </button>
+        </div>
+        
+        <!-- Navigation mobile -->
+        <div class="mobile-menu">
+          <ul class="mobile-nav-links">
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="produits.html">Produits</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="about.html">À propos</a></li>
+          </ul>
+          <div class="mobile-actions">
+            <a href="#" class="icon-btn"><i class="fas fa-search"></i></a>
+            <a href="compte.html" class="icon-btn"><i class="fas fa-user"></i></a>
+            <a href="panier.html" class="icon-btn"><i class="fas fa-shopping-cart"></i></a>
+          </div>
+        </div>
+      </div>
+    </header>
 
-    <img src="assets/tech-giants.webp" alt="" class="big__img">
+    <!-- Page principale -->
+    <main>
+      <!-- Section Hero -->
+      <section class="hero">
+        <div class="container">
+          <div class="hero-content">
+            <h1>Découvrez l'excellence technologique</h1>
+            <p>Des équipements informatiques de qualité pour professionnels et particuliers.</p>
+            <div class="hero-buttons">
+              <a href="produits.html" class="btn btn-primary">Voir les produits</a>
+              <a href="contact.html" class="btn btn-outline">Nous contacter</a>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Produits populaires -->
+      <section class="featured-products">
+        <div class="container">
+          <h2 class="section-title">Produits populaires</h2>
+          <div class="product-grid">
+            <!-- Produit 1 -->
+            <div class="product-card">
+              <div class="product-image">
+                <img src="assets/laptop.jpg" alt="Laptop Pro X">
+                <button class="wishlist-btn"><i class="fas fa-heart"></i></button>
+              </div>
+              <div class="product-info">
+                <div class="product-category">Ordinateurs portables</div>
+                <h3 class="product-name"><a href="produit-detail.html">Macbook Pro</a></h3>
+                <div class="product-details">
+                  <div class="product-rating">
+                    <div class="stars">
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star-half-alt"></i>
+                    </div>
+                    <span>4.8</span>
+                  </div>
+                  <div class="product-price">1299.99 DT</div>
+                </div>
+                <button class="btn btn-primary btn-full">Ajouter au panier</button>
+              </div>
+            </div>
+            
+            <!-- Produit 2 -->
+            <div class="product-card">
+              <div class="product-image">
+                <img src="https://fr.pcspecialist.be/images/landing/pcs/gaming-pc/bundle.jpg" alt="Desktop Gamer 3000">
+                <button class="wishlist-btn"><i class="fas fa-heart"></i></button>
+              </div>
+              <div class="product-info">
+                <div class="product-category">Ordinateurs de bureau</div>
+                <h3 class="product-name"><a href="produit-detail.html">Desktop Gamer 3000</a></h3>
+                <div class="product-details">
+                  <div class="product-rating">
+                    <div class="stars">
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                    </div>
+                    <span>4.9</span>
+                  </div>
+                  <div class="product-price">1899.99 DT</div>
+                </div>
+                <button class="btn btn-primary btn-full">Ajouter au panier</button>
+              </div>
+            </div>
+            
+            <!-- Produit 3 -->
+            <div class="product-card">
+              <div class="product-image">
+                <img src="https://www.scoop.com.tn/46493-large_default/ecran-lg-27-uhd-4k-ips-5ms.jpg" alt="Écran 4K Ultra">
+                <button class="wishlist-btn"><i class="fas fa-heart"></i></button>
+              </div>
+              <div class="product-info">
+                <div class="product-category">Périphériques</div>
+                <h3 class="product-name"><a href="produit-detail.html">Écran 4K Ultra</a></h3>
+                <div class="product-details">
+                  <div class="product-rating">
+                    <div class="stars">
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star-half-alt"></i>
+                    </div>
+                    <span>4.6</span>
+                  </div>
+                  <div class="product-price">399.99 DT</div>
+                </div>
+                <button class="btn btn-primary btn-full">Ajouter au panier</button>
+              </div>
+            </div>
+            
+            <!-- Produit 4 -->
+            <div class="product-card">
+              <div class="product-image">
+                <img src="https://images.unsplash.com/photo-1563297007-0686b7003af7?&w=500&h=350&fit=crop" alt="Souris Gaming Pro">
+                <button class="wishlist-btn"><i class="fas fa-heart"></i></button>
+              </div>
+              <div class="product-info">
+                <div class="product-category">Accessoires</div>
+                <h3 class="product-name"><a href="produit-detail.html">Souris Gaming Pro</a></h3>
+                <div class="product-details">
+                  <div class="product-rating">
+                    <div class="stars">
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star-half-alt"></i>
+                    </div>
+                    <span>4.7</span>
+                  </div>
+                  <div class="product-price">79.99 DT</div>
+                </div>
+                <button class="btn btn-primary btn-full">Ajouter au panier</button>
+              </div>
+            </div>
+          </div>
+          <div class="section-footer">
+            <a href="produits.html" class="btn btn-outline">Voir tous les produits</a>
+          </div>
+        </div>
+      </section>
 
-    <table>
-        <thead>
-            <tr>
-                <th>Catégorie</th>
-                <th>Description</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td>Processeurs</td>
-                <td>Unités centrales de traitement (CPU) pour ordinateurs</td>
-            </tr>
-            <tr>
-                <td>Mémoire</td>
-                <td>Modules de mémoire vive (RAM)</td>
-            </tr>
-            <tr>
-                <td>Stockage</td>
-                <td>Disques durs et disques SSD</td>
-            </tr>
-            <tr>
-                <td>Cartes mères</td>
-                <td>Cartes principales pour ordinateurs</td>
-            </tr>
-            <tr>
-                <td>Cartes graphiques</td>
-                <td>GPU dédiés pour le rendu d'images et de vidéos</td>
-            </tr>
-        </tbody>
-    </table>
+      <!-- Catégories -->
+      <section class="categories">
+        <div class="container">
+          <h2 class="section-title">Catégories de produits</h2>
+          <div class="categories-grid">
+            <!-- Catégorie 1 -->
+            <a href="produits.html?categorie=ordinateurs-portables" class="category-card">
+              <div class="category-image">
+                <img src="assets/laptop.jpg">
+              </div>
+              <h3 class="category-name">Ordinateurs portables</h3>
+            </a>
+            
+            <!-- Catégorie 2 -->
+            <a href="produits.html?categorie=ordinateurs-bureau" class="category-card">
+              <div class="category-image">
+                <img src="assets/desktop.jpg">
+              </div>
+              <h3 class="category-name">Ordinateurs de bureau</h3>
+            </a>
+            
+            <!-- Catégorie 3 -->
+            <a href="produits.html?categorie=composants" class="category-card">
+              <div class="category-image">
+                <img src="https://images.unsplash.com/photo-1591799264318-7e6ef8ddb7ea?&w=500&h=350&fit=crop" alt="Composants">
+              </div>
+              <h3 class="category-name">Composants</h3>
+            </a>
+            
+            <!-- Catégorie 4 -->
+            <a href="produits.html?categorie=peripheriques" class="category-card">
+              <div class="category-image">
+                <img src="assets/peripheriques.jpg">
+              </div>
+              <h3 class="category-name">Périphériques</h3>
+            </a>
+          </div>
+        </div>
+      </section>
 
-    
+      <!-- Services -->
+      <section class="services">
+        <div class="container">
+          <h2 class="section-title">Nos services</h2>
+          <div class="services-grid">
+            <!-- Service 1 -->
+            <div class="service-card">
+              <div class="service-icon">
+                <i class="fas fa-laptop"></i>
+              </div>
+              <h3 class="service-title">Réparation d'ordinateurs</h3>
+              <p class="service-description">Service rapide et professionnel pour réparer tous types d'ordinateurs portables et de bureau.</p>
+            </div>
+            
+            <!-- Service 2 -->
+            <div class="service-card">
+              <div class="service-icon">
+                <i class="fas fa-network-wired"></i>
+              </div>
+              <h3 class="service-title">Maintenance réseau</h3>
+              <p class="service-description">Installation, configuration et maintenance de réseaux pour entreprises et particuliers.</p>
+            </div>
+            
+            <!-- Service 3 -->
+            <div class="service-card">
+              <div class="service-icon">
+                <i class="fas fa-database"></i>
+              </div>
+              <h3 class="service-title">Récupération de données</h3>
+              <p class="service-description">Récupération professionnelle de données perdues ou corrompues sur tous types de supports.</p>
+            </div>
+          </div>
+        </div>
+      </section>
 
-    <footer>
-        <p>ENSITEK ©</p>
+      <!-- Témoignages -->
+      <section class="testimonials">
+        <div class="container">
+          <h2 class="section-title">Ce que disent nos clients</h2>
+          <div class="testimonials-grid">
+            <!-- Témoignage 1 -->
+            <div class="testimonial-card">
+              <div class="testimonial-rating">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+              </div>
+              <p class="testimonial-text">"Le service client est exceptionnel. J'ai eu un problème avec mon ordinateur portable, et ils l'ont réparé en moins de 24 heures."</p>
+              <div class="testimonial-author">Sophie Martin</div>
+            </div>
+            
+            <!-- Témoignage 2 -->
+            <div class="testimonial-card">
+              <div class="testimonial-rating">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+              </div>
+              <p class="testimonial-text">"Produits de qualité à des prix raisonnables. La livraison est rapide et le suivi de commande très bien fait."</p>
+              <div class="testimonial-author">Thomas Dubois</div>
+            </div>
+            
+            <!-- Témoignage 3 -->
+            <div class="testimonial-card">
+              <div class="testimonial-rating">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+              </div>
+              <p class="testimonial-text">"Je recommande vivement leur service de récupération de données. Ils ont sauvé toutes mes photos de famille suite à une panne de disque dur."</p>
+              <div class="testimonial-author">Julie Legrand</div>
+            </div>
+          </div>
+        </div>
+      </section>
 
-        <p>Adresse: Campus Universitaire de la Manouba, 2010 La Manouba, Tunisie</p>
+      <!-- CTA -->
+      <section class="cta">
+        <div class="container">
+          <h2 class="cta-title">Prêt à améliorer votre équipement informatique ?</h2>
+          <p class="cta-description">Découvrez notre gamme complète de produits et services informatiques.</p>
+          <a href="produits.html" class="btn btn-light">Voir nos produits</a>
+        </div>
+      </section>
+      <button id="back-to-top" class="btn btn-primary">↑</button>
+    </main>
 
-        <p>Téléphone: +216 71 234 567</p>
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-grid">
+          <!-- Informations entreprise -->
+          <div class="footer-col">
+            <h3 class="footer-title">ENSITEK</h3>
+            <p class="footer-description">Votre partenaire pour tous vos besoins en matériel informatique et services IT.</p>
+            <div class="footer-contact">
+              <div class="contact-item">
+                <i class="fas fa-envelope"></i>
+                <span>contact@ensitek.tn</span>
+              </div>
+              <div class="contact-item">
+                <i class="fas fa-phone"></i>
+                <span>+33 1 23 45 67 89</span>
+              </div>
+              <div class="contact-item">
+                <i class="fas fa-map-marker-alt"></i>
+                <span>123 ENSI,Compus Universitaire,Manouba,Tunisie</span>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Catégories -->
+          <div class="footer-col">
+            <h3 class="footer-title">Catégories</h3>
+            <ul class="footer-links">
+              <li><a href="produits.html?categorie=ordinateurs-portables">Ordinateurs portables</a></li>
+              <li><a href="produits.html?categorie=ordinateurs-bureau">Ordinateurs de bureau</a></li>
+              <li><a href="produits.html?categorie=composants">Composants</a></li>
+              <li><a href="produits.html?categorie=peripheriques">Périphériques</a></li>
+              <li><a href="produits.html?categorie=accessoires">Accessoires</a></li>
+            </ul>
+          </div>
+          
+          <!-- Service client -->
+          <div class="footer-col">
+            <h3 class="footer-title">Service client</h3>
+            <ul class="footer-links">
+              <li><a href="contact.html">Contact</a></li>
+              <li><a href="about.html">À propos de nous</a></li>
+              <li><a href="faq.html">FAQ</a></li>
+              <li><a href="livraison.html">Livraison</a></li>
+              <li><a href="retours.html">Retours et remboursements</a></li>
+            </ul>
+          </div>
+          
+          <!-- Newsletter -->
+          <div class="footer-col">
+            <h3 class="footer-title">Newsletter</h3>
+            <p class="footer-description">Abonnez-vous à notre newsletter pour recevoir les dernières offres et promotions.</p>
+            <form class="newsletter-form">
+              <input type="email" placeholder="Votre email" required>
+              <button type="submit" class="btn btn-primary">S'abonner</button>
+            </form>
+          </div>
+        </div>
 
-        <p>Email:
-            <a href="contact.html">ensitek@gmail.com</a>
+        <div>
+
+        </div>
+        
+        <div class="footer-bottom">
+          <p>© 2025 ENSITEK. Tous droits réservés.</p>
+        </div>
+      </div>
     </footer>
+  </div>
 
+  <script src="main.js"></script>
 </body>
 </html>

@@ -1,0 +1,580 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Laptop Pro X - ENSITEK</title>
+  <meta name="description" content="Découvrez le Laptop Pro X, un ordinateur portable haut de gamme avec des performances exceptionnelles" />
+  <link rel="stylesheet" href="styles.css">
+  <!-- Fontawesome pour les icônes -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <!-- IMPORTANT: DO NOT REMOVE THIS SCRIPT TAG OR THIS VERY COMMENT! -->
+  <script src="https://cdn.gpteng.co/gptengineer.js" type="module"></script>
+</head>
+
+<body>
+  <div id="root">
+    <!-- Header / Navigation -->
+    <header class="navbar">
+      <div class="container">
+        <div class="navbar-content">
+          <a href="index.html" class="logo">ENSITEK</a>
+          
+          <!-- Navigation principale -->
+          <nav class="nav-desktop">
+            <ul class="nav-links">
+              <li><a href="index.html">Accueil</a></li>
+              <li><a href="produits.html" class="active">Produits</a></li>
+              <li><a href="contact.html">Contact</a></li>
+              <li><a href="about.html">À propos</a></li>
+            </ul>
+          </nav>
+          
+          <!-- Actions -->
+          <div class="nav-actions">
+            <div class="nav-actions">
+              <form class="search-form">
+                <div class="search-box">
+                <input type="text" placeholder="Rechercher..." aria-label="Search">
+                <button type="submit" class="icon-btn"><i class="fas fa-search"></i></button>
+                </div>
+              </form>
+              <a href="compte.html" class="icon-btn"><i class="fas fa-user"></i></a>
+              <a href="panier.html" class="icon-btn cart-icon">
+                <i class="fas fa-shopping-cart"></i>
+                <span class="cart-count">0</span>
+              </a>
+          </div>
+          
+          <!-- Menu hamburger mobile -->
+          <button class="mobile-menu-btn">
+            <i class="fas fa-bars"></i>
+          </button>
+        </div>
+        
+        <!-- Navigation mobile -->
+        <div class="mobile-menu">
+          <ul class="mobile-nav-links">
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="produits.html">Produits</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="about.html">À propos</a></li>
+          </ul>
+          <div class="mobile-actions">
+            <a href="#" class="icon-btn"><i class="fas fa-search"></i></a>
+            <a href="#" class="icon-btn"><i class="fas fa-user"></i></a>
+            <a href="panier.html" class="icon-btn"><i class="fas fa-shopping-cart"></i></a>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+      <div class="container py-8">
+        <!-- Fil d'Ariane -->
+        <div class="breadcrumb">
+          <a href="index.html">Accueil</a>
+          <i class="fas fa-chevron-right"></i>
+          <a href="produits.html">Produits</a>
+          <i class="fas fa-chevron-right"></i>
+          <a href="produits.html?categorie=ordinateurs-portables">Ordinateurs portables</a>
+          <i class="fas fa-chevron-right"></i>
+          <span>Laptop Pro X</span>
+        </div>
+        
+        <!-- Product Detail -->
+        <div class="product-detail">
+          <!-- Product Images -->
+          <div class="product-gallery">
+            <div class="main-image">
+              <img id="main-product-image" src="https://images.unsplash.com/photo-1588872657578-7efd1f1555ed?&w=800&h=600&fit=crop" alt="Laptop Pro X">
+            </div>
+            <div class="thumbnail-images">
+              <button class="thumbnail active" data-image="https://images.unsplash.com/photo-1588872657578-7efd1f1555ed?&w=800&h=600&fit=crop">
+                <img src="https://images.unsplash.com/photo-1588872657578-7efd1f1555ed?&w=800&h=600&fit=crop" alt="Laptop Pro X - Vue 1">
+              </button>
+              <button class="thumbnail" data-image="https://images.unsplash.com/photo-1603302576837-37561b2e2302?&w=800&h=600&fit=crop">
+                <img src="https://images.unsplash.com/photo-1603302576837-37561b2e2302?&w=800&h=600&fit=crop" alt="Laptop Pro X - Vue 2">
+              </button>
+              <button class="thumbnail" data-image="https://images.unsplash.com/photo-1496181133206-80ce9b88a853?&w=800&h=600&fit=crop">
+                <img src="https://images.unsplash.com/photo-1496181133206-80ce9b88a853?&w=800&h=600&fit=crop" alt="Laptop Pro X - Vue 3">
+              </button>
+              <button class="thumbnail" data-image="https://images.unsplash.com/photo-1527443195645-1133f7f28990?&w=800&h=600&fit=crop">
+                <img src="https://images.unsplash.com/photo-1527443195645-1133f7f28990?&w=800&h=600&fit=crop" alt="Laptop Pro X - Vue 4">
+              </button>
+            </div>
+          </div>
+          
+          <!-- Product Info -->
+          <div class="product-info">
+            <div class="product-brand">TechBrand</div>
+            <h1 class="product-title">Laptop Pro X</h1>
+            
+            <div class="product-review">
+              <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+              </div>
+              <span class="review-count">4.8 (124 avis)</span>
+            </div>
+            
+            <div class="product-price">
+              <span class="current-price">1299.99 DT</span>
+              <span class="original-price">1499.99 DT</span>
+              <span class="discount">-13%</span>
+            </div>
+            
+            <div class="product-description">
+              <p>Le Laptop Pro X est un ordinateur portable haut de gamme avec des performances exceptionnelles pour les professionnels et les gamers. Équipé du dernier processeur, d'une carte graphique puissante et d'un écran haute résolution, cet ordinateur vous offrira une expérience utilisateur inégalée.</p>
+            </div>
+            
+            <div class="product-meta">
+              <div class="meta-item">
+                <span class="meta-label">Disponibilité:</span>
+                <span class="meta-value in-stock">En stock (15 disponibles)</span>
+              </div>
+              <div class="meta-item">
+                <span class="meta-label">Catégorie:</span>
+                <a href="produits.html?categorie=ordinateurs-portables" class="meta-value">Ordinateurs portables</a>
+              </div>
+            </div>
+            
+            <div class="product-actions">
+              <div class="quantity-selector">
+                <button class="quantity-btn decrease-btn"><i class="fas fa-minus"></i></button>
+                <input type="number" min="1" value="1" class="quantity-input">
+                <button class="quantity-btn increase-btn"><i class="fas fa-plus"></i></button>
+              </div>
+              
+              <button class="btn btn-primary add-to-cart-btn">
+                <i class="fas fa-shopping-cart"></i> Ajouter au panier
+              </button>
+              
+              <button class="btn-icon wishlist-btn">
+                <i class="far fa-heart"></i>
+              </button>
+            </div>
+            
+            <div class="product-benefits">
+              <div class="benefit-item">
+                <div class="benefit-icon"><i class="fas fa-truck"></i></div>
+                <div class="benefit-text">
+                  <h4>Livraison gratuite</h4>
+                  <p>Pour les commandes supérieures à 50DT</p>
+                </div>
+              </div>
+              
+              <div class="benefit-item">
+                <div class="benefit-icon"><i class="fas fa-box"></i></div>
+                <div class="benefit-text">
+                  <h4>Retours gratuits</h4>
+                  <p>Sous 30 jours</p>
+                </div>
+              </div>
+              
+              <div class="benefit-item">
+                <div class="benefit-icon"><i class="fas fa-credit-card"></i></div>
+                <div class="benefit-text">
+                  <h4>Paiement sécurisé</h4>
+                  <p>Transactions 100% sécurisées</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Product Tabs -->
+        <div class="product-tabs">
+          <div class="tabs-header">
+            <button class="tab-btn active" data-tab="description">Description</button>
+            <button class="tab-btn" data-tab="specifications">Spécifications</button>
+            <button class="tab-btn" data-tab="reviews">Avis (124)</button>
+          </div>
+          
+          <div class="tabs-content">
+            <!-- Description Tab -->
+            <div class="tab-panel active" id="description-panel">
+              <h3>Découvrez le Laptop Pro X</h3>
+              <p>Le Laptop Pro X est conçu pour offrir des performances exceptionnelles aux professionnels et aux gamers exigeants. Avec son processeur ultra-rapide, sa mémoire vive généreuse et son stockage SSD, il vous permettra d'exécuter toutes vos applications et jeux préférés avec une fluidité remarquable.</p>
+              
+              <h3>Design élégant et robuste</h3>
+              <p>Avec son châssis en aluminium, le Laptop Pro X allie élégance et durabilité. Son clavier rétroéclairé et son grand touchpad vous offriront un confort d'utilisation optimal, même dans des conditions de faible luminosité.</p>
+              
+              <h3>Écran haute résolution</h3>
+              <p>Profitez d'une expérience visuelle immersive grâce à l'écran 4K du Laptop Pro X. Avec ses couleurs vives et ses noirs profonds, il est parfait pour le travail graphique, le montage vidéo ou pour profiter de vos films et séries préférés.</p>
+              
+              <h3>Connectivité complète</h3>
+              <p>Le Laptop Pro X est équipé de tous les ports dont vous avez besoin : USB-C, USB-A, HDMI, RJ45 et prise jack. Il prend également en charge les dernières normes Wi-Fi et Bluetooth pour une connexion rapide et stable.</p>
+            </div>
+            
+            <!-- Specifications Tab -->
+            <div class="tab-panel" id="specifications-panel">
+              <h3>Caractéristiques techniques</h3>
+              <table class="specs-table">
+                <tbody>
+                  <tr>
+                    <td>Processeur</td>
+                    <td>Intel Core i9, 12ème génération</td>
+                  </tr>
+                  <tr>
+                    <td>Mémoire RAM</td>
+                    <td>32 GB DDR5</td>
+                  </tr>
+                  <tr>
+                    <td>Stockage</td>
+                    <td>SSD 1 TB</td>
+                  </tr>
+                  <tr>
+                    <td>Carte graphique</td>
+                    <td>NVIDIA RTX 4070</td>
+                  </tr>
+                  <tr>
+                    <td>Écran</td>
+                    <td>15.6 pouces, 4K (3840 x 2160), 144 Hz</td>
+                  </tr>
+                  <tr>
+                    <td>Système d'exploitation</td>
+                    <td>Windows 11 Pro</td>
+                  </tr>
+                  <tr>
+                    <td>Poids</td>
+                    <td>2.1 kg</td>
+                  </tr>
+                  <tr>
+                    <td>Dimensions</td>
+                    <td>358 x 248 x 19.9 mm</td>
+                  </tr>
+                  <tr>
+                    <td>Connectivité</td>
+                    <td>Wi-Fi 6E, Bluetooth 5.2</td>
+                  </tr>
+                  <tr>
+                    <td>Ports</td>
+                    <td>2x USB-C, 3x USB-A, HDMI, RJ45, Jack 3.5mm</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            
+            <!-- Reviews Tab -->
+            <div class="tab-panel" id="reviews-panel">
+              <div class="reviews-summary">
+                <div class="average-rating">
+                  <div class="rating-value">4.8</div>
+                  <div class="rating-stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                  </div>
+                  <div class="rating-count">Basé sur 124 avis</div>
+                </div>
+                
+                <div class="rating-bars">
+                  <div class="rating-bar">
+                    <div class="bar-label">5 étoiles</div>
+                    <div class="bar-outer">
+                      <div class="bar-inner" style="width: 80%;"></div>
+                    </div>
+                    <div class="bar-count">80%</div>
+                  </div>
+                  <div class="rating-bar">
+                    <div class="bar-label">4 étoiles</div>
+                    <div class="bar-outer">
+                      <div class="bar-inner" style="width: 15%;"></div>
+                    </div>
+                    <div class="bar-count">15%</div>
+                  </div>
+                  <div class="rating-bar">
+                    <div class="bar-label">3 étoiles</div>
+                    <div class="bar-outer">
+                      <div class="bar-inner" style="width: 3%;"></div>
+                    </div>
+                    <div class="bar-count">3%</div>
+                  </div>
+                  <div class="rating-bar">
+                    <div class="bar-label">2 étoiles</div>
+                    <div class="bar-outer">
+                      <div class="bar-inner" style="width: 1%;"></div>
+                    </div>
+                    <div class="bar-count">1%</div>
+                  </div>
+                  <div class="rating-bar">
+                    <div class="bar-label">1 étoile</div>
+                    <div class="bar-outer">
+                      <div class="bar-inner" style="width: 1%;"></div>
+                    </div>
+                    <div class="bar-count">1%</div>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="reviews-list">
+                <div class="review-item">
+                  <div class="review-header">
+                    <h4>Excellent produit</h4>
+                    <div class="review-meta">
+                      <div class="review-stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                      </div>
+                      <div class="review-author">Jean Dupont</div>
+                      <div class="review-date">15/04/2023</div>
+                    </div>
+                  </div>
+                  <div class="review-content">
+                    <p>Je suis très satisfait de cet ordinateur portable. Les performances sont au rendez-vous et la qualité de construction est exceptionnelle.</p>
+                  </div>
+                </div>
+                
+                <div class="review-item">
+                  <div class="review-header">
+                    <h4>Bon rapport qualité/prix</h4>
+                    <div class="review-meta">
+                      <div class="review-stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="far fa-star"></i>
+                      </div>
+                      <div class="review-author">Marie Martin</div>
+                      <div class="review-date">02/03/2023</div>
+                    </div>
+                  </div>
+                  <div class="review-content">
+                    <p>Très bon ordinateur pour le prix. Seul bémol, la durée de vie de la batterie pourrait être meilleure.</p>
+                  </div>
+                </div>
+                
+                <div class="review-item">
+                  <div class="review-header">
+                    <h4>Parfait pour le gaming</h4>
+                    <div class="review-meta">
+                      <div class="review-stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                      </div>
+                      <div class="review-author">Pierre Lefebvre</div>
+                      <div class="review-date">18/02/2023</div>
+                    </div>
+                  </div>
+                  <div class="review-content">
+                    <p>Les performances sont incroyables, même avec les jeux les plus exigeants. L'écran est magnifique et le système de refroidissement est efficace.</p>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="write-review">
+                <h3>Donnez votre avis</h3>
+                <form class="review-form">
+                  <div class="form-group">
+                    <label>Votre note</label>
+                    <div class="rating-select">
+                      <i class="far fa-star" data-rating="1"></i>
+                      <i class="far fa-star" data-rating="2"></i>
+                      <i class="far fa-star" data-rating="3"></i>
+                      <i class="far fa-star" data-rating="4"></i>
+                      <i class="far fa-star" data-rating="5"></i>
+                    </div>
+                  </div>
+                  
+                  <div class="form-group">
+                    <label for="review-title">Titre</label>
+                    <input type="text" id="review-title" required>
+                  </div>
+                  
+                  <div class="form-group">
+                    <label for="review-content">Votre avis</label>
+                    <textarea id="review-content" rows="5" required></textarea>
+                  </div>
+                  
+                  <div class="form-group">
+                    <label for="review-name">Votre nom</label>
+                    <input type="text" id="review-name" required>
+                  </div>
+                  
+                  <div class="form-group">
+                    <label for="review-email">Votre email</label>
+                    <input type="email" id="review-email" required>
+                  </div>
+                  
+                  <div class="form-group checkbox-group">
+                    <input type="checkbox" id="review-consent" required>
+                    <label for="review-consent">J'accepte que mes données soient traitées conformément à la politique de confidentialité</label>
+                  </div>
+                  
+                  <button type="submit" class="btn btn-primary">Soumettre l'avis</button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Similar Products -->
+        <section class="similar-products">
+          <h2 class="section-title">Produits similaires</h2>
+          <div class="product-grid">
+            <!-- Produit 1 -->
+            <div class="product-card">
+              <div class="product-image">
+                <img src="https://images.unsplash.com/photo-1603302576837-37561b2e2302?&w=500&h=350&fit=crop" alt="Laptop Slim S">
+                <button class="wishlist-btn"><i class="far fa-heart"></i></button>
+              </div>
+              <div class="product-info">
+                <div class="product-category">Ordinateurs portables</div>
+                <h3 class="product-name"><a href="produit-detail.html">Laptop Slim S</a></h3>
+                <div class="product-details">
+                  <div class="product-rating">
+                    <div class="stars">
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star-half-alt"></i>
+                    </div>
+                    <span>4.6</span>
+                  </div>
+                  <div class="product-price">999.99 DT</div>
+                </div>
+                <button class="btn btn-primary btn-full">Ajouter au panier</button>
+              </div>
+            </div>
+            
+            <!-- Produit 2 -->
+            <div class="product-card">
+              <div class="product-image">
+                <img src="https://images.unsplash.com/photo-1496181133206-80ce9b88a853?&w=500&h=350&fit=crop" alt="Laptop Gaming G">
+                <button class="wishlist-btn"><i class="far fa-heart"></i></button>
+              </div>
+              <div class="product-info">
+                <div class="product-category">Ordinateurs portables</div>
+                <h3 class="product-name"><a href="produit-detail.html">Laptop Gaming G</a></h3>
+                <div class="product-details">
+                  <div class="product-rating">
+                    <div class="stars">
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                    </div>
+                    <span>4.9</span>
+                  </div>
+                  <div class="product-price">1499.99 DT</div>
+                </div>
+                <button class="btn btn-primary btn-full">Ajouter au panier</button>
+              </div>
+            </div>
+            
+            <!-- Produit 3 -->
+            <div class="product-card">
+              <div class="product-image">
+                <img src="https://images.unsplash.com/photo-1527443195645-1133f7f28990?&w=500&h=350&fit=crop" alt="Laptop Ultrabook U">
+                <button class="wishlist-btn"><i class="far fa-heart"></i></button>
+              </div>
+              <div class="product-info">
+                <div class="product-category">Ordinateurs portables</div>
+                <h3 class="product-name"><a href="produit-detail.html">Laptop Ultrabook U</a></h3>
+                <div class="product-details">
+                  <div class="product-rating">
+                    <div class="stars">
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star-half-alt"></i>
+                    </div>
+                    <span>4.7</span>
+                  </div>
+                  <div class="product-price">1199.99 DT</div>
+                </div>
+                <button class="btn btn-primary btn-full">Ajouter au panier</button>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-grid">
+          <!-- Informations entreprise -->
+          <div class="footer-col">
+            <h3 class="footer-title">ENSITEK</h3>
+            <p class="footer-description">Votre partenaire pour tous vos besoins en matériel informatique et services IT.</p>
+            <div class="footer-contact">
+              <div class="contact-item">
+                <i class="fas fa-envelope"></i>
+                <span>contact@ENSITEK.com</span>
+              </div>
+              <div class="contact-item">
+                <i class="fas fa-phone"></i>
+                <span>+33 1 23 45 67 89</span>
+              </div>
+              <div class="contact-item">
+                <i class="fas fa-map-marker-alt"></i>
+                <span>123 ENSI,Compus Universitaire,Manouba,Tunisie</span>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Catégories -->
+          <div class="footer-col">
+            <h3 class="footer-title">Catégories</h3>
+            <ul class="footer-links">
+              <li><a href="produits.html?categorie=ordinateurs-portables">Ordinateurs portables</a></li>
+              <li><a href="produits.html?categorie=ordinateurs-bureau">Ordinateurs de bureau</a></li>
+              <li><a href="produits.html?categorie=composants">Composants</a></li>
+              <li><a href="produits.html?categorie=peripheriques">Périphériques</a></li>
+              <li><a href="produits.html?categorie=accessoires">Accessoires</a></li>
+            </ul>
+          </div>
+          
+          <!-- Service client -->
+          <div class="footer-col">
+            <h3 class="footer-title">Service client</h3>
+            <ul class="footer-links">
+              <li><a href="contact.html">Contact</a></li>
+              <li><a href="about.html">À propos de nous</a></li>
+              <li><a href="faq.html">FAQ</a></li>
+              <li><a href="livraison.html">Livraison</a></li>
+              <li><a href="retours.html">Retours et remboursements</a></li>
+            </ul>
+          </div>
+          
+          <!-- Newsletter -->
+          <div class="footer-col">
+            <h3 class="footer-title">Newsletter</h3>
+            <p class="footer-description">Abonnez-vous à notre newsletter pour recevoir les dernières offres et promotions.</p>
+            <form class="newsletter-form">
+              <input type="email" placeholder="Votre email" required>
+              <button type="submit" class="btn btn-primary">S'abonner</button>
+            </form>
+          </div>
+        </div>
+        
+        <div class="footer-bottom">
+          <p>© 2023 ENSITEK. Tous droits réservés.</p>
+        </div>
+      </div>
+    </footer>
+  </div>
+  
+  <script src="product-detail.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
