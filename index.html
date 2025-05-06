@@ -7,6 +7,7 @@
   <meta name="description" content="ENSITEK - Votre boutique en ligne de matériels et services informatiques" />
   <link rel="stylesheet" href="styles.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <script src="main.js"></script>
 
 
 </head>
@@ -23,7 +24,7 @@
           <nav class="nav-desktop">
             <ul class="nav-links">
               <li><a href="index.html" class="active">Accueil</a></li>
-              <li><a href="produits.html">Produits</a></li>
+              <li><a href="produits.php">Produits</a></li>
               <li><a href="contact.html">Contact</a></li>
               <li><a href="about.html">À propos</a></li>
             </ul>
@@ -41,8 +42,8 @@
                 </div>
               </form>
               </form>
-            <a href="compte.html" class="icon-btn"><i class="fas fa-user"></i></a>
-            <a href="panier.html" class="icon-btn cart-icon">
+            <a href="compte.php" class="icon-btn"><i class="fas fa-user"></i></a>
+            <a href="panier.php" class="icon-btn cart-icon">
               <i class="fas fa-shopping-cart"></i>
               <span class="cart-count">0</span>
             </a>
@@ -58,14 +59,14 @@
         <div class="mobile-menu">
           <ul class="mobile-nav-links">
             <li><a href="index.html">Accueil</a></li>
-            <li><a href="produits.html">Produits</a></li>
+            <li><a href="produits.php">Produits</a></li>
             <li><a href="contact.html">Contact</a></li>
             <li><a href="about.html">À propos</a></li>
           </ul>
           <div class="mobile-actions">
             <a href="#" class="icon-btn"><i class="fas fa-search"></i></a>
-            <a href="compte.html" class="icon-btn"><i class="fas fa-user"></i></a>
-            <a href="panier.html" class="icon-btn"><i class="fas fa-shopping-cart"></i></a>
+            <a href="compte.php" class="icon-btn"><i class="fas fa-user"></i></a>
+            <a href="panier.php" class="icon-btn"><i class="fas fa-shopping-cart"></i></a>
           </div>
         </div>
       </div>
@@ -74,18 +75,20 @@
     <!-- Page principale -->
     <main>
       <!-- Section Hero -->
-      <section class="hero">
-        <div class="container">
-          <div class="hero-content">
+      <section class="hero-section">
+        <video autoplay loop muted playsinline>
+            <source src="assets/Gen-4 Turbo Make a video that show a pc ,mouse and keybord, the screen of pc show developpment and tech staff 153192531.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <div class="content">
             <h1>Découvrez l'excellence technologique</h1>
             <p>Des équipements informatiques de qualité pour professionnels et particuliers.</p>
             <div class="hero-buttons">
-              <a href="produits.html" class="btn btn-primary">Voir les produits</a>
+              <a href="produits.php" class="btn btn-primary">Voir les produits</a>
               <a href="contact.html" class="btn btn-outline">Nous contacter</a>
             </div>
-          </div>
         </div>
-      </section>
+    </section>
       <!-- Produits populaires -->
       <section class="featured-products">
         <div class="container">
@@ -196,7 +199,7 @@
             </div>
           </div>
           <div class="section-footer">
-            <a href="produits.html" class="btn btn-outline">Voir tous les produits</a>
+            <a href="produits.php" class="btn btn-outline">Voir tous les produits</a>
           </div>
         </div>
       </section>
@@ -207,7 +210,7 @@
           <h2 class="section-title">Catégories de produits</h2>
           <div class="categories-grid">
             <!-- Catégorie 1 -->
-            <a href="produits.html?categorie=ordinateurs-portables" class="category-card">
+            <a href="produits.php?categorie=ordinateurs-portables" class="category-card">
               <div class="category-image">
                 <img src="assets/laptop.jpg">
               </div>
@@ -215,7 +218,7 @@
             </a>
             
             <!-- Catégorie 2 -->
-            <a href="produits.html?categorie=ordinateurs-bureau" class="category-card">
+            <a href="produits.php?categorie=ordinateurs-bureau" class="category-card">
               <div class="category-image">
                 <img src="assets/desktop.jpg">
               </div>
@@ -223,7 +226,7 @@
             </a>
             
             <!-- Catégorie 3 -->
-            <a href="produits.html?categorie=composants" class="category-card">
+            <a href="produits.php?categorie=composants" class="category-card">
               <div class="category-image">
                 <img src="https://images.unsplash.com/photo-1591799264318-7e6ef8ddb7ea?&w=500&h=350&fit=crop" alt="Composants">
               </div>
@@ -231,7 +234,7 @@
             </a>
             
             <!-- Catégorie 4 -->
-            <a href="produits.html?categorie=peripheriques" class="category-card">
+            <a href="produits.php?categorie=peripheriques" class="category-card">
               <div class="category-image">
                 <img src="assets/peripheriques.jpg">
               </div>
@@ -328,10 +331,10 @@
         <div class="container">
           <h2 class="cta-title">Prêt à améliorer votre équipement informatique ?</h2>
           <p class="cta-description">Découvrez notre gamme complète de produits et services informatiques.</p>
-          <a href="produits.html" class="btn btn-light">Voir nos produits</a>
+          <a href="produits.php" class="btn btn-light">Voir nos produits</a>
         </div>
       </section>
-      <button id="back-to-top" class="btn btn-primary">↑</button>
+      <button id="back-to-top" class="btn btn-primary"></button>
     </main>
 
     <!-- Footer -->
@@ -345,7 +348,7 @@
             <div class="footer-contact">
               <div class="contact-item">
                 <i class="fas fa-envelope"></i>
-                <span>contact@ensitek.tn</span>
+                <span>ensitek.sg@gmail.com</span>
               </div>
               <div class="contact-item">
                 <i class="fas fa-phone"></i>
@@ -362,11 +365,11 @@
           <div class="footer-col">
             <h3 class="footer-title">Catégories</h3>
             <ul class="footer-links">
-              <li><a href="produits.html?categorie=ordinateurs-portables">Ordinateurs portables</a></li>
-              <li><a href="produits.html?categorie=ordinateurs-bureau">Ordinateurs de bureau</a></li>
-              <li><a href="produits.html?categorie=composants">Composants</a></li>
-              <li><a href="produits.html?categorie=peripheriques">Périphériques</a></li>
-              <li><a href="produits.html?categorie=accessoires">Accessoires</a></li>
+              <li><a href="produits.php?categorie=ordinateurs-portables">Ordinateurs portables</a></li>
+              <li><a href="produits.php?categorie=ordinateurs-bureau">Ordinateurs de bureau</a></li>
+              <li><a href="produits.php?categorie=composants">Composants</a></li>
+              <li><a href="produits.php?categorie=peripheriques">Périphériques</a></li>
+              <li><a href="produits.php?categorie=accessoires">Accessoires</a></li>
             </ul>
           </div>
           

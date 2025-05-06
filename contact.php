@@ -1,0 +1,330 @@
+<?php
+
+use PHPMailer\PHPMailer\PHPMailer;
+use PHPMailer\PHPMailer\Exception;
+
+require 'vendor/autoload.php'; // Path to PHPMailer autoload
+
+$success_message = '';
+$error_message = '';
+
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+  // Sanitize inputs
+  $name = htmlspecialchars($_POST['name']);
+  $email = filter_var($_POST['email'], FILTER_SANITIZE_EMAIL);
+  $phone = htmlspecialchars($_POST['phone']);
+  $subject = htmlspecialchars($_POST['subject']);
+  $message = htmlspecialchars($_POST['message']);
+
+  // Validate inputs
+  if (empty($name) || empty($email) || empty($message)) {
+    $error_message = "Veuillez remplir tous les champs obligatoires.";
+  } elseif (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+    $error_message = "Adresse email invalide.";
+  } else {
+    try {
+      $mail = new PHPMailer(true);
+
+      // Server settings
+      $mail->isSMTP();
+      $mail->Host       = 'smtp.example.com'; // Your SMTP server
+      $mail->SMTPAuth   = true;
+      $mail->Username   = 'azerchakir2.0.0.3@gmail.com'; // SMTP username
+      $mail->Password   = 'your_password'; // SMTP password
+      $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;
+      $mail->Port       = 465;
+
+      // Recipients
+      $mail->setFrom($email, $name);
+      $mail->addAddress('azerchakir2.0.0.3@gmail.com', 'ENSITEK');
+
+      // Content
+      $mail->isHTML(true);
+      $mail->Subject = "Nouveau message de contact: $subject";
+      $mail->Body    = "<h3>Nouveau message de contact</h3>
+                            <p><strong>Nom:</strong> $name</p>
+                            <p><strong>Email:</strong> $email</p>
+                            <p><strong>Téléphone:</strong> $phone</p>
+                            <p><strong>Sujet:</strong> $subject</p>
+                            <p><strong>Message:</strong><br>" . nl2br($message) . "</p>";
+
+      $mail->send();
+      $success_message = "Votre message a été envoyé avec succès!";
+    } catch (Exception $e) {
+      $error_message = "Erreur lors de l'envoi du message: " . $mail->ErrorInfo;
+    }
+  }
+}
+?>
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact - ENSITEK</title>
+  <meta name="description" content="Contactez ENSITEK pour toutes vos questions concernant nos produits et services informatiques" />
+  <link rel="stylesheet" href="styles.css">
+  <!-- Fontawesome pour les icônes -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <!-- IMPORTANT: DO NOT REMOVE THIS SCRIPT TAG OR THIS VERY COMMENT! -->
+  <!-- <script src="https://cdn.gpteng.co/gptengineer.js" type="module"></script> -->
+</head>
+
+<body>
+  <div id="root">
+    <!-- Header / Navigation -->
+    <header class="navbar">
+      <div class="container">
+        <div class="navbar-content">
+          <a href="index.html" class="logo">ENSITEK</a>
+
+          <!-- Navigation principale -->
+          <nav class="nav-desktop">
+            <ul class="nav-links">
+              <li><a href="index.html">Accueil</a></li>
+              <li><a href="produits.php">Produits</a></li>
+              <li><a href="contact.html" class="active">Contact</a></li>
+              <li><a href="about.html">À propos</a></li>
+            </ul>
+          </nav>
+
+          <!-- Actions -->
+          <div class="nav-actions">
+            <div class="nav-actions">
+              <form class="search-form">
+                <div class="search-box">
+                  <input type="text" placeholder="Rechercher..." aria-label="Search">
+                  <button type="submit" class="icon-btn"><i class="fas fa-search"></i></button>
+                </div>
+              </form>
+              <a href="compte.php" class="icon-btn"><i class="fas fa-user"></i></a>
+              <a href="panier.php" class="icon-btn cart-icon">
+                <i class="fas fa-shopping-cart"></i>
+                <span class="cart-count">0</span>
+              </a>
+            </div>
+
+            <!-- Menu hamburger mobile -->
+            <button class="mobile-menu-btn">
+              <i class="fas fa-bars"></i>
+            </button>
+          </div>
+
+          <!-- Navigation mobile -->
+          <div class="mobile-menu">
+            <ul class="mobile-nav-links">
+              <li><a href="index.html">Accueil</a></li>
+              <li><a href="produits.php">Produits</a></li>
+              <li><a href="contact.html">Contact</a></li>
+              <li><a href="about.html">À propos</a></li>
+            </ul>
+            <div class="mobile-actions">
+              <a href="#" class="icon-btn"><i class="fas fa-search"></i></a>
+              <a href="#" class="icon-btn"><i class="fas fa-user"></i></a>
+              <a href="panier.php" class="icon-btn"><i class="fas fa-shopping-cart"></i></a>
+            </div>
+          </div>
+        </div>
+    </header>
+
+    <!-- Page Title -->
+    <section class="page-title">
+      <div class="container">
+        <h1>Contactez-nous</h1>
+
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact-section">
+      <div class="container">
+
+        <div class="contact-container">
+          <div class="contact-info-container">
+            <p>Pour toute question concernant nos produits ou services, n'hésitez pas à nous contacter.</p>
+            <div class="contact-info">
+              <h2>Informations de contact</h2>
+              <p>Nous sommes disponibles pour vous aider et répondre à toutes vos questions.</p>
+
+              <div class="info-item">
+                <div class="info-icon">
+                  <i class="fas fa-map-marker-alt"></i>
+                </div>
+                <div class="info-text">
+                  <h3>Adresse</h3>
+                  <p>123 ENSI, Campus Universitaire, Manouba, Tunisie</p>
+                </div>
+              </div>
+
+              <div class="info-item">
+                <div class="info-icon">
+                  <i class="fas fa-phone"></i>
+                </div>
+                <div class="info-text">
+                  <h3>Téléphone</h3>
+                  <p>+216-12-345-678</p>
+                </div>
+              </div>
+
+              <div class="info-item">
+                <div class="info-icon">
+                  <i class="fas fa-envelope"></i>
+                </div>
+                <div class="info-text">
+                  <h3>Email</h3>
+                  <p>ensitek.sg@gmail.com</p>
+                </div>
+              </div>
+
+              <div class="info-item">
+                <div class="info-icon">
+                  <i class="fas fa-clock"></i>
+                </div>
+                <div class="info-text">
+                  <h3>Heures d'ouverture</h3>
+                  <p>Lundi - Vendredi: 9h à 18h<br>Samedi: 10h à 17h<br>Dimanche: Fermé</p>
+                </div>
+              </div>
+
+              <div class="social-links">
+                <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                <a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a>
+              </div>
+            </div>
+          </div>
+          <div class="contact-form-container">
+
+            <form class="contact-form" id="contactForm" method="POST" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>">
+              <h2 classe="form-title">Envoyez-nous un email</h2>
+              <div class="form-group">
+                <label for="name">Nom complet:</label><br>
+                <input type="text" id="name" name="name" required>
+              </div>
+
+              <div class="form-group">
+                <label for="email">Email:</label><br>
+                <input type="email" id="email" name="email" required>
+              </div>
+
+              <div class="form-group">
+                <label for="phone">Téléphone:</label><br>
+                <input type="tel" id="phone" name="phone">
+              </div>
+
+              <div class="form-group">
+                <label for="subject">Sujet:</label><br>
+                <select id="subject" name="subject">
+                  <option value="question">Question générale</option>
+                  <option value="support">Support technique</option>
+                  <option value="orders">Commandes</option>
+                  <option value="returns">Retours & remboursements</option>
+                  <option value="other">Autre</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label for="message">Message:</label><br>
+                <textarea id="message" name="message" rows="5" required></textarea>
+              </div>
+
+              <button type="submit" class="btn btn-primary">Envoyer le message</button>
+            </form>
+          </div>
+
+
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Map Section
+      <section class="map-section">
+        <div class="container">
+            <div class="map-container">
+                <iframe 
+                src="https://www.google.com/maps/place/%C3%89cole+Nationale+des+Sciences+de+l'Informatique/@36.8136901,10.0603551,1134m/data=!3m1!1e3!4m6!3m5!1s0x12fd2d96d4a9d6c9:0xbbe38a2694938acf!8m2!3d36.8137496!4d10.0637659!16s%2Fg%2F1235kngn?entry=ttu&g_ep=EgoyMDI1MDMyNS4xIKXMDSoASAFQAw%3D%3D" 
+                width="25%" 
+                height="250" 
+                style="border:0;" 
+                allowfullscreen="" 
+                loading="lazy">
+                </iframe>
+            </div>
+            </div>
+        </section> -->
+
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-grid">
+          <!-- Informations entreprise -->
+          <div class="footer-col">
+            <h3 class="footer-title">ENSITEK</h3>
+            <p class="footer-description">Votre partenaire pour tous vos besoins en matériel informatique et services IT.</p>
+            <div class="footer-contact">
+              <div class="contact-item">
+                <i class="fas fa-envelope"></i>
+                <span>ensitek.sg@gmail.com</span>
+              </div>
+              <div class="contact-item">
+                <i class="fas fa-phone"></i>
+                <span>+33 1 23 45 67 89</span>
+              </div>
+              <div class="contact-item">
+                <i class="fas fa-map-marker-alt"></i>
+                <span>123 ENSI, Campus Universitaire, Manouba, Tunisie</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Catégories -->
+          <div class="footer-col">
+            <h3 class="footer-title">Catégories</h3>
+            <ul class="footer-links">
+              <li><a href="produits.php?categorie=ordinateurs-portables">Ordinateurs portables</a></li>
+              <li><a href="produits.php?categorie=ordinateurs-bureau">Ordinateurs de bureau</a></li>
+              <li><a href="produits.php?categorie=composants">Composants</a></li>
+              <li><a href="produits.php?categorie=peripheriques">Périphériques</a></li>
+              <li><a href="produits.php?categorie=accessoires">Accessoires</a></li>
+            </ul>
+          </div>
+
+          <!-- Service client -->
+          <div class="footer-col">
+            <h3 class="footer-title">Service client</h3>
+            <ul class="footer-links">
+              <li><a href="contact.html">Contact</a></li>
+              <li><a href="about.html">À propos de nous</a></li>
+              <li><a href="faq.html">FAQ</a></li>
+              <li><a href="livraison.html">Livraison</a></li>
+              <li><a href="retours.html">Retours et remboursements</a></li>
+            </ul>
+          </div>
+
+          <!-- Newsletter -->
+          <div class="footer-col">
+            <h3 class="footer-title">Newsletter</h3>
+            <p class="footer-description">Abonnez-vous à notre newsletter pour recevoir les dernières offres et promotions.</p>
+            <form class="newsletter-form">
+              <input type="email" placeholder="Votre email" required>
+              <button type="submit" class="btn btn-primary">S'abonner</button>
+            </form>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <p>© 2025 ENSITEK. Tous droits réservés.</p>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <script src="contact.js"></script>
+  <script src="script.js"></script>
+</body>
+
+</html>
